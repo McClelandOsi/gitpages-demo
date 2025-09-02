@@ -1,0 +1,45 @@
+html, body { height: 100%; }
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 800px at 70% 20%, #ffffff 0%, #eef2ff 50%, #e8f7fb 100%);
+}
+h1 {
+  font-family: "Bubblegum Sans", "Baloo 2", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-size: clamp(3rem, 8vw, 8rem);
+  letter-spacing: 1px;
+  color: #2d2a32;
+  line-height: 1.1;
+  padding: 0 .5rem;
+  text-align: center;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.6),
+    0 6px 0 #dbeafe,
+    0 10px 15px rgba(0,0,0,.15);
+  -webkit-font-smoothing: antialiased;
+}
+
+.bubble {
+  position: relative;
+}
+
+.bubble::before, .bubble::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: .25;
+  filter: blur(2px);
+}
+
+.bubble::before {
+  width: 100px; height: 100px;
+  top: -40px; left: -60px;
+  background: #a5f3fc;
+}
+
+.bubble::after {
+  width: 140px; height: 140px;
+  bottom: -50px; right: -70px;
+  background: #c7d2fe;
+}
